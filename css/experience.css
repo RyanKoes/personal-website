@@ -1,0 +1,650 @@
+body {
+    background-color: #f3eee3;
+    margin: 0;
+    padding: 0;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="8" fill="%23B96D40"/></svg>') 12 12, auto;
+}
+
+/* Typography */
+
+body {
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+    font-family: "Unica One", sans-serif;
+    font-weight: 400;
+    font-size: 3.052rem;
+    font-style: normal;
+    color: #39393A;
+}
+h2 {
+    font-size: 2.441rem;
+}
+h3 {
+    font-size: 1.953rem;
+}
+h4 {
+    font-size: 1.563rem;
+}
+h5 {
+    font-size: 1.25rem;
+}
+h6 {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Header and Nav bar */
+
+header {
+    background-color: #f3eee3;
+    margin: 0;
+    padding: 1rem 2rem;
+}
+
+/* Header inner container: two columns (name left, nav right) */
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: none; /* allow the header to span the full viewport */
+    padding-right: 1rem; /* nudge nav further to the right */
+    box-sizing: border-box;
+}
+
+.site-title {
+    margin: 0;
+    font-family: "Unica One", sans-serif;
+    font-size: 3rem;
+    color: #39393A;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-left: auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0;
+    color: #B96D40;
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="11" fill="%23B96D40"/></svg>') 16 16, auto;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(185, 109, 64, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+a {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="11" fill="%23B96D40"/></svg>') 16 16, auto;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #8B5C3F;
+}
+
+.nearby-text {
+    font-weight: bold;
+    transition: font-weight 0.1s ease;
+}
+
+/* Footer */
+
+footer {
+    background-color: #c2b299;
+    min-height: 300px;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* MainLayout */
+
+main {
+    padding: 1rem;
+    width: 1260;
+    min-height: 600px;
+    margin: auto;
+}
+
+/* Intro paragraph */
+.intro-text {
+    max-width: 1260px;
+    margin: 10rem auto 2rem auto;
+    padding: 0 2rem;
+    text-align: center;
+    color: #39393A;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Experience section */
+.experience-container {
+    background: #E4DACA;
+    border-radius: 70px;
+    padding: 3rem;
+    width: 85%;
+    margin: 2.5rem auto;
+    box-sizing: border-box;
+    max-width: 1400px;
+}
+
+.experience-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #39393A;
+}
+
+.experience-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.experience-item:last-child {
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+}
+
+.experience-left {
+    flex: 0 0 40%;
+    display: flex;
+    gap: 0;
+    position: relative;
+}
+
+.experience-date-location {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+    color: #39393A;
+}
+
+.experience-date-location p {
+    margin: 0.25rem 0;
+}
+
+.experience-timeline {
+    flex: 0 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 80px;
+}
+
+.experience-dot {
+    width: 16px;
+    height: 16px;
+    background: #B96D40;
+    border-radius: 50%;
+    margin-top: 4px;
+    position: relative;
+    z-index: 2;
+}
+
+.experience-item:not(:last-child) .experience-timeline::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% + 50px);
+    background: #39393A;
+}
+
+.experience-item:last-child .experience-timeline::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc((100% + 50px) / 2);
+    background: #39393A;
+}
+
+.experience-image {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.experience-image-box {
+    width: 100%;
+    max-width: 280px;
+    height: 200px;
+    background: transparent;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.experience-image-box:hover {
+    transform: scale(1.1);
+}
+
+.experience-image-1 {
+    background-image: url('../images/peraton_labs.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.experience-image-2 {
+    background-image: url('../images/Bucknell_Coffee.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.experience-image-3 {
+    background-image: url('../images/dominguez_center.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.experience-image-4 {
+    background-image: url('../images/Tidbyt.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.experience-image-5 {
+    background-image: url('../images/Bucknell_Logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.experience-image-6 {
+    background-image: url('../images/Old_Navy.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.experience-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.experience-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.experience-right h4 {
+    margin-bottom: 0.5rem;
+    color: #39393A;
+}
+
+.experience-right p {
+    margin: 0.3rem 0;
+    color: #39393A;
+    line-height: 1.6;
+}
+
+/* Fade-in animation */
+.fade-in-element {
+    opacity: 0.1;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ============================================ */
+
+/* Large Tablets and Small Desktops (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.6rem;
+    }
+    
+    .site-title {
+        font-size: 2.5rem;
+    }
+    
+    nav ul {
+        gap: 1.5rem;
+    }
+    
+    nav ul li a {
+        font-size: 1rem;
+    }
+    
+    .intro-text {
+        margin: 8rem auto 2rem auto;
+        font-size: 1.05rem;
+    }
+    
+    .experience-container {
+        width: 90%;
+        padding: 2.5rem;
+    }
+    
+    .experience-item {
+        gap: 1.5rem;
+    }
+    
+    .experience-image-box {
+        max-width: 240px;
+        height: 180px;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    
+    .header-inner {
+        flex-direction: column;
+        gap: 1rem;
+        padding-right: 0;
+    }
+    
+    .site-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.95rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+    }
+    
+    h4 {
+        font-size: 1.35rem;
+    }
+    
+    main {
+        padding: 0.75rem;
+    }
+    
+    .intro-text {
+        margin: 5rem auto 2rem auto;
+        padding: 0 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .experience-container {
+        width: 95%;
+        padding: 2rem;
+        border-radius: 40px;
+    }
+    
+    .experience-container h2 {
+        margin-bottom: 1.5rem;
+    }
+    
+    .experience-item {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    
+    .experience-left {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .experience-date-location {
+        flex: 1;
+        font-size: 0.9rem;
+    }
+    
+    .experience-timeline {
+        display: none;
+    }
+    
+    .experience-image {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .experience-image-box {
+        max-width: 300px;
+        height: 200px;
+    }
+    
+    .experience-right {
+        width: 100%;
+    }
+    
+    footer {
+        min-height: auto;
+        padding: 1.5rem 0.75rem;
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.75rem;
+    }
+    
+    .site-title {
+        font-size: 1.75rem;
+    }
+    
+    nav ul {
+        gap: 0.75rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    nav ul li a:hover {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    h4 {
+        font-size: 1.1rem;
+    }
+    
+    h5 {
+        font-size: 1rem;
+    }
+    
+    main {
+        padding: 0.5rem;
+    }
+    
+    .intro-text {
+        margin: 3rem auto 1.5rem auto;
+        padding: 0 1rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .experience-container {
+        width: 95%;
+        padding: 1.5rem;
+        border-radius: 30px;
+        margin: 2rem auto;
+    }
+    
+    .experience-container h2 {
+        margin-bottom: 1.25rem;
+        font-size: 1.5rem;
+    }
+    
+    .experience-item {
+        gap: 1.25rem;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .experience-item:last-child {
+        margin-bottom: 0.75rem;
+    }
+    
+    .experience-left {
+        gap: 1rem;
+    }
+    
+    .experience-date-location {
+        font-size: 0.85rem;
+    }
+    
+    .experience-date-location p {
+        margin: 0.2rem 0;
+    }
+    
+    .experience-image-box {
+        max-width: 100%;
+        height: 180px;
+    }
+    
+    .experience-right h4 {
+        margin-bottom: 0.4rem;
+        font-size: 1.1rem;
+    }
+    
+    .experience-right p {
+        margin: 0.25rem 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    footer {
+        padding: 1.25rem 0.5rem;
+    }
+}
+
+/* Extra Small Mobile Devices (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    .site-title {
+        font-size: 1.5rem;
+    }
+    
+    nav ul {
+        gap: 0.5rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.35rem;
+    }
+    
+    h4 {
+        font-size: 1rem;
+    }
+    
+    .intro-text {
+        margin: 2rem auto 1.25rem auto;
+        padding: 0 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .experience-container {
+        padding: 1.25rem;
+        border-radius: 25px;
+    }
+    
+    .experience-container h2 {
+        font-size: 1.35rem;
+    }
+    
+    .experience-item {
+        gap: 1rem;
+        margin-bottom: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
+    
+    .experience-date-location {
+        font-size: 0.8rem;
+    }
+    
+    .experience-image-box {
+        height: 160px;
+    }
+    
+    .experience-right h4 {
+        font-size: 1rem;
+    }
+    
+    .experience-right p {
+        font-size: 0.9rem;
+    }
+}

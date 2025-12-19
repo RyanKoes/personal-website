@@ -1,0 +1,1381 @@
+
+
+/* General Styles */
+
+/* Last experience timeline: half length and arrow tip (inline for template.html) */
+.experience-item:last-child .experience-timeline::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc((100% + 50px) / 2); /* exactly half the normal length */
+    background: #39393A;
+}
+
+body {
+    background-color: #f3eee3;
+    margin: 0;
+    padding: 0;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="8" fill="%23B96D40"/></svg>') 12 12, auto;
+}
+
+/* Typography */
+
+body {
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+    font-family: "Unica One", sans-serif;
+    font-weight: 400;
+    font-size: 3.052rem;
+    font-style: normal;
+    color: #39393A;
+}
+h2 {
+    font-size: 2.441rem;
+}
+h3 {
+    font-size: 1.953rem;
+}
+h4 {
+    font-size: 1.563rem;
+}
+h5 {
+    font-size: 1.25rem;
+}
+h6 {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Header and Nav bar */
+
+header {
+    background-color: #f3eee3;
+    margin: 0;
+    padding: 1rem 2rem;
+}
+
+/* Header inner container: two columns (name left, nav right) */
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: none; /* allow the header to span the full viewport */
+    padding-right: 1rem; /* nudge nav further to the right */
+    box-sizing: border-box;
+}
+
+.site-title {
+    margin: 0;
+    font-family: "Unica One", sans-serif;
+    font-size: 3rem;
+    color: #39393A;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-left: auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0;
+    color: #B96D40;
+    padding: 0;
+    border-radius: 0.25rem;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="11" fill="%23B96D40"/></svg>') 16 16, auto;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(185, 109, 64, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+a {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="11" fill="%23B96D40"/></svg>') 16 16, auto;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #8B5C3F;
+}
+
+.nearby-text {
+    font-weight: bold;
+    transition: font-weight 0.1s ease;
+}            /* Footer */
+
+footer {
+    background-color: #c2b299;
+    min-height: 300px;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* MainLayout */
+
+main {
+    padding: 1rem;
+    width: 1260;
+    min-height: 600px;
+    margin: auto;
+}
+
+/* Two-column area under header: left circle, right text */
+.main-columns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1260px;
+    margin: 6rem auto 17rem auto;
+    box-sizing: border-box;
+}
+
+.left-col,
+.right-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-col {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.right-col {
+    flex: 1 1 60%;
+    max-width: 60%;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.circle {
+    width: 400px;
+    height: 400px;
+    background-image: url('../images/headshot.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    opacity: 0.5;
+    transform: scale(0.85);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.circle.animate-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.text-block {
+    max-width: 700px;
+    color: #39393A;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.text-block.fade-in-element {
+    transform: translateY(30px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.text-block.fade-in-element.visible {
+    transform: translateY(0);
+}
+
+.full-width-box {
+    width: 85%;
+    margin: 2.5rem auto; 
+    background: #E4DACA;
+    border-radius: 70px;
+    padding: 3rem;
+    box-sizing: border-box;
+    max-width: 1400px;
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    min-height: 400px;
+}
+
+.full-width-box .left-section {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.full-width-box .left-section h3 {
+    margin-bottom: 1rem;
+    color: #39393A;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.full-width-box .left-section p {
+    text-align: left;
+    line-height: 1.6;
+    color: #39393A;
+    margin-bottom: 1rem;
+}
+
+.full-width-box .right-section {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-box {
+    background: #c2b299;
+    border-radius: 35px;
+    padding: 4rem;
+    width: 100%;
+    height: 90%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-box h4 {
+    margin: 0 0 1.5rem 0;
+    color: #39393A;
+    font-size: 1.5rem;
+}
+
+.skill-item {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-label {
+    color: #39393A;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.skill-bar {
+    background: #E4DACA;
+    border-radius: 12px;
+    height: 24px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    background: #B96D40;
+    height: 100%;
+    border-radius: 12px;
+    width: 0 !important;
+    transition: width 2.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+}
+
+.skill-fill.animate {
+    width: var(--target-width) !important;
+}
+
+.skill-percentage {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Download buttons */
+.download-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 85%;
+    max-width: 1400px;
+    margin: 2rem auto 4rem auto;
+}
+
+.download-btn {
+    background: #B96D40;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 0.85rem 1.75rem;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="11" fill="%23B96D40"/></svg>') 16 16, auto;
+}
+
+.download-btn:hover {
+    background: #8B5C3F;
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+/* Education section */
+.education-section {
+    display: flex;
+    gap: 2rem;
+    max-width: 1260px;
+    margin: 15rem auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+
+.education-image {
+    flex: 0 0 33.33%;
+    display: flex;
+    justify-content: center;
+}
+
+.education-image-box {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    background-image: url('../images/Bucknell_Logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+.education-text {
+    flex: 1 1 66.67%;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-text h3 {
+    margin-bottom: 1rem;
+    color: #39393A;
+}
+
+.education-text p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: #39393A;
+}
+
+/* Experience section */
+.experience-container {
+    background: #E4DACA;
+    border-radius: 70px;
+    padding: 3rem;
+    width: 85%;
+    margin: 4rem auto;
+    box-sizing: border-box;
+    max-width: 1400px;
+}
+
+.experience-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #39393A;
+}
+
+.experience-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.experience-item:last-child {
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+}
+
+.experience-left {
+    flex: 0 0 40%;
+    display: flex;
+    gap: 0;
+    position: relative;
+}
+
+.experience-date-location {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 0.9rem;
+    color: #39393A;
+}
+
+.experience-date-location p {
+    margin: 0.25rem 0;
+}
+
+.experience-timeline {
+    flex: 0 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 80px;
+}
+
+.experience-dot {
+    width: 16px;
+    height: 16px;
+    background: #B96D40;
+    border-radius: 50%;
+    margin-top: 4px;
+    position: relative;
+    z-index: 2;
+}
+
+.experience-item:not(:last-child) .experience-timeline::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% + 50px);
+    background: #39393A;
+}
+
+.experience-image {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.experience-image-box {
+    width: 100%;
+    max-width: 280px;
+    height: 200px;
+    background: transparent;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.experience-image-box:hover {
+    transform: scale(1.1);
+}
+
+.experience-image-1 {
+    background-image: url('../images/peraton_labs.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.experience-image-2 {
+    background-image: url('../images/Bucknell_Coffee.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.experience-image-3 {
+    background-image: url('../images/dominguez_center.png');
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.experience-right {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.experience-right h4 {
+    margin: 0 0 0.5rem 0;
+    color: #39393A;
+    font-size: 1.2rem;
+}
+
+.experience-right p {
+    margin: 0.25rem 0;
+    line-height: 1.5;
+    color: #39393A;
+    font-size: 0.95rem;
+}
+
+.experience-more {
+    text-align: center;
+    color: #B96D40;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+/* Extracurricular section */
+.extracurricular-section {
+    max-width: 1260px;
+    margin: 4rem auto;
+    padding: 14rem 2rem;
+    box-sizing: border-box;
+}
+
+.extracurricular-section h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #39393A;
+}
+
+.extracurricular-grid {
+    display: flex;
+    gap: 3.5rem;
+    justify-content: center;
+}
+
+.extracurricular-card {
+    flex: 0 0 calc(33.33% - 1.35rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #E4DACA;
+    padding: 1.5rem;
+    border-radius: 35px;
+    box-sizing: border-box;
+}
+
+.extracurricular-image {
+    width: 90%;
+    height: 180px;
+    background: transparent;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.extracurricular-image-1 {
+    background-image: url('../images/cheme_car.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.extracurricular-image-2 {
+    background-image: url('../images/Brewer.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.extracurricular-image-3 {
+    background-image: url('../images/baseball.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.extracurricular-card p {
+    color: #39393A;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Contact Me section */
+.contact-container {
+    background: #E4DACA;
+    border-radius: 70px;
+    padding: 3rem;
+    width: 85%;
+    margin: 4rem auto;
+    box-sizing: border-box;
+    max-width: 1400px;
+}
+
+.contact-container h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #39393A;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.contact-item {
+    flex: 1 1 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-item h4 {
+    margin-bottom: 0.5rem;
+    color: #39393A;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    color: #39393A;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.contact-item a {
+    color: #B96D40;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Fade-in animation for scroll */
+.fade-in-element {
+    opacity: 0.1;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact text styling for email and LinkedIn */
+.contact-text {
+    color: #B96D40;
+    text-decoration: underline;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="8" fill="%23B96D40"/></svg>') 12 12, auto;
+    display: inline;
+}
+
+.contact-text:hover {
+    color: #B96D40;
+    text-decoration: underline;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><circle cx="16" cy="16" r="11" fill="%23B96D40"/></svg>') 16 16, auto;
+}
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ============================================ */
+
+/* Large Tablets and Small Desktops (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.6rem;
+    }
+    
+    .site-title {
+        font-size: 2.5rem;
+    }
+    
+    nav ul {
+        gap: 1.5rem;
+    }
+    
+    nav ul li a {
+        font-size: 1rem;
+    }
+    
+    .main-columns {
+        margin: 5rem auto 14rem auto;
+        gap: 1.5rem;
+    }
+    
+    .circle {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .text-block {
+        font-size: 1.15rem;
+    }
+    
+    .full-width-box {
+        width: 90%;
+        padding: 2.5rem;
+        gap: 1.5rem;
+    }
+    
+    .skills-box {
+        padding: 3rem;
+    }
+    
+    .education-section {
+        margin: 12rem auto;
+        gap: 1.5rem;
+    }
+    
+    .education-image-box {
+        max-width: 350px;
+        height: 350px;
+    }
+    
+    .experience-container {
+        width: 90%;
+        padding: 2.5rem;
+    }
+    
+    .experience-item {
+        gap: 1.5rem;
+    }
+    
+    .experience-image-box {
+        max-width: 240px;
+        height: 180px;
+    }
+    
+    .extracurricular-section {
+        padding: 10rem 2rem;
+    }
+    
+    .extracurricular-grid {
+        gap: 2rem;
+    }
+    
+    .extracurricular-card {
+        flex: 0 0 calc(33.33% - 1rem);
+    }
+    
+    .contact-container {
+        width: 90%;
+        padding: 2.5rem;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    
+    .header-inner {
+        flex-direction: column;
+        gap: 1rem;
+        padding-right: 0;
+    }
+    
+    .site-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.95rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+    }
+    
+    h4 {
+        font-size: 1.35rem;
+    }
+    
+    main {
+        padding: 0.75rem;
+    }
+    
+    .main-columns {
+        flex-direction: column;
+        margin: 3rem auto 8rem auto;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .left-col {
+        flex: 1;
+        max-width: 100%;
+    }
+    
+    .right-col {
+        flex: 1;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .circle {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .text-block {
+        font-size: 1.05rem;
+    }
+    
+    .full-width-box {
+        width: 95%;
+        padding: 2rem;
+        border-radius: 40px;
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .full-width-box .left-section,
+    .full-width-box .right-section {
+        flex: 1;
+        width: 100%;
+    }
+    
+    .full-width-box .left-section h3 {
+        font-size: 1.75rem;
+    }
+    
+    .skills-box {
+        padding: 2.5rem;
+        height: auto;
+    }
+    
+    .download-buttons {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5rem auto 3rem auto;
+    }
+    
+    .download-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .education-section {
+        flex-direction: column;
+        margin: 8rem auto;
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+    
+    .education-image {
+        flex: 1;
+        width: 100%;
+    }
+    
+    .education-image-box {
+        max-width: 100%;
+        height: 300px;
+    }
+    
+    .education-text {
+        flex: 1;
+        width: 100%;
+    }
+    
+    .experience-container {
+        width: 95%;
+        padding: 2rem;
+        border-radius: 40px;
+    }
+    
+    .experience-container h2 {
+        margin-bottom: 1.5rem;
+    }
+    
+    .experience-item {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    
+    .experience-left {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .experience-date-location {
+        flex: 1;
+    }
+    
+    .experience-timeline {
+        display: none;
+    }
+    
+    .experience-image {
+        flex: 1;
+    }
+    
+    .experience-image-box {
+        max-width: 300px;
+        height: 200px;
+    }
+    
+    .experience-right {
+        width: 100%;
+    }
+    
+    .extracurricular-section {
+        padding: 6rem 1rem;
+        margin: 3rem auto;
+    }
+    
+    .extracurricular-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .extracurricular-card {
+        flex: 1;
+        width: 100%;
+    }
+    
+    .extracurricular-image {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .contact-container {
+        width: 95%;
+        padding: 2rem;
+        border-radius: 40px;
+    }
+    
+    .contact-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .contact-item {
+        flex: 1;
+        width: 100%;
+    }
+    
+    footer {
+        min-height: auto;
+        padding: 1.5rem 0.75rem;
+    }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.75rem;
+    }
+    
+    .site-title {
+        font-size: 1.75rem;
+    }
+    
+    nav ul {
+        gap: 0.75rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    nav ul li a:hover {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    h4 {
+        font-size: 1.1rem;
+    }
+    
+    h5 {
+        font-size: 1rem;
+    }
+    
+    main {
+        padding: 0.5rem;
+    }
+    
+    .main-columns {
+        margin: 2rem auto 4rem auto;
+        padding: 0 0.75rem;
+        gap: 1.5rem;
+    }
+    
+    .circle {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .text-block {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .full-width-box {
+        width: 95%;
+        padding: 1.5rem;
+        border-radius: 30px;
+        margin: 2rem auto;
+    }
+    
+    .full-width-box .left-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .full-width-box .left-section p {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .skills-box {
+        padding: 2rem;
+        border-radius: 25px;
+    }
+    
+    .skills-box h4 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .skill-bar {
+        height: 20px;
+    }
+    
+    .download-buttons {
+        margin: 1rem auto 2rem auto;
+    }
+    
+    .download-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+        border-radius: 20px;
+    }
+    
+    .education-section {
+        margin: 4rem auto;
+        padding: 0 0.75rem;
+        gap: 1.5rem;
+    }
+    
+    .education-image-box {
+        height: 240px;
+    }
+    
+    .education-text h3 {
+        margin-bottom: 0.75rem;
+    }
+    
+    .education-text p {
+        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.5;
+    }
+    
+    .experience-container {
+        width: 95%;
+        padding: 1.5rem;
+        border-radius: 30px;
+        margin: 2rem auto;
+    }
+    
+    .experience-container h2 {
+        margin-bottom: 1.25rem;
+        font-size: 1.5rem;
+    }
+    
+    .experience-item {
+        gap: 1.25rem;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .experience-item:last-child {
+        margin-bottom: 0.75rem;
+    }
+    
+    .experience-date-location {
+        font-size: 0.85rem;
+    }
+    
+    .experience-image-box {
+        max-width: 100%;
+        height: 180px;
+    }
+    
+    .experience-right h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .experience-right p {
+        font-size: 0.9rem;
+        margin: 0.2rem 0;
+    }
+    
+    .extracurricular-section {
+        padding: 4rem 0.75rem;
+        margin: 2rem auto;
+    }
+    
+    .extracurricular-section h3 {
+        margin-bottom: 1.5rem;
+    }
+    
+    .extracurricular-grid {
+        gap: 1.5rem;
+    }
+    
+    .extracurricular-card {
+        padding: 1.25rem;
+        border-radius: 25px;
+    }
+    
+    .extracurricular-image {
+        height: 160px;
+        border-radius: 15px;
+    }
+    
+    .extracurricular-card p {
+        font-size: 0.9rem;
+    }
+    
+    .contact-container {
+        width: 95%;
+        padding: 1.5rem;
+        border-radius: 30px;
+        margin: 2rem auto;
+    }
+    
+    .contact-container h3 {
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact-grid {
+        gap: 1.25rem;
+    }
+    
+    .contact-item h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+    
+    footer {
+        padding: 1.25rem 0.5rem;
+    }
+}
+
+/* Extra Small Mobile Devices (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    .site-title {
+        font-size: 1.5rem;
+    }
+    
+    nav ul {
+        gap: 0.5rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.35rem;
+    }
+    
+    h3 {
+        font-size: 1.15rem;
+    }
+    
+    h4 {
+        font-size: 1rem;
+    }
+    
+    .main-columns {
+        margin: 1.5rem auto 3rem auto;
+        padding: 0 0.5rem;
+    }
+    
+    .circle {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .text-block {
+        font-size: 0.9rem;
+    }
+    
+    .full-width-box {
+        padding: 1.25rem;
+        border-radius: 25px;
+    }
+    
+    .full-width-box .left-section h3 {
+        font-size: 1.35rem;
+    }
+    
+    .full-width-box .left-section p {
+        font-size: 0.9rem;
+    }
+    
+    .skills-box {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+    
+    .skills-box h4 {
+        font-size: 1.15rem;
+    }
+    
+    .skill-label {
+        font-size: 0.85rem;
+    }
+    
+    .skill-bar {
+        height: 18px;
+    }
+    
+    .download-btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .education-section {
+        margin: 3rem auto;
+        padding: 0 0.5rem;
+    }
+    
+    .education-image-box {
+        height: 200px;
+    }
+    
+    .education-text h3 {
+        font-size: 1.25rem;
+    }
+    
+    .education-text p {
+        font-size: 0.9rem;
+    }
+    
+    .experience-container {
+        padding: 1.25rem;
+        border-radius: 25px;
+    }
+    
+    .experience-container h2 {
+        font-size: 1.35rem;
+    }
+    
+    .experience-item {
+        gap: 1rem;
+        margin-bottom: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
+    
+    .experience-date-location {
+        font-size: 0.8rem;
+    }
+    
+    .experience-image-box {
+        height: 160px;
+    }
+    
+    .experience-right h4 {
+        font-size: 1rem;
+    }
+    
+    .experience-right p {
+        font-size: 0.85rem;
+    }
+    
+    .extracurricular-section {
+        padding: 3rem 0.5rem;
+    }
+    
+    .extracurricular-section h3 {
+        font-size: 1.25rem;
+    }
+    
+    .extracurricular-card {
+        padding: 1rem;
+        border-radius: 20px;
+    }
+    
+    .extracurricular-image {
+        height: 140px;
+        border-radius: 12px;
+    }
+    
+    .extracurricular-card p {
+        font-size: 0.85rem;
+    }
+    
+    .contact-container {
+        padding: 1.25rem;
+        border-radius: 25px;
+    }
+    
+    .contact-container h3 {
+        font-size: 1.25rem;
+    }
+    
+    .contact-item h4 {
+        font-size: 1rem;
+    }
+    
+    .contact-item p {
+        font-size: 0.85rem;
+    }
+}
+
