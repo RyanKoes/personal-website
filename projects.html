@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&family=Unica+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <style>
+        .projects-page-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem;
+            background-color: var(--bg-secondary);
+            border-radius: 70px;
+        }
+
+        .projects-page-container h2 {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="title-container" style="display: flex; flex-direction: column; align-items: flex-start;">
+                <h1 class="site-title"><a href="index.html" class="no-inline-link">Ryan Koes</a></h1>
+                <div class="header-socials" style="margin-top: 5px;">
+                    <a href="https://www.linkedin.com/in/ryan-koes/" target="_blank" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--text-color)">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/RyanKoes" target="_blank" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--text-color)">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="extracurricular.html">Extracurricular</a></li>
+                    <li><a href="projects.html" style="font-weight: bold;">Projects</a></li>
+                    <li><a href="conferences.html">Conferences</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects-page-container fade-in-element">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h4>Personal Website</h4>
+                    <p class="project-tech">HTML, CSS, JavaScript, GitHub Pages</p>
+                    <p>Developed a personal website to showcase my skills and projects. This website serves as a portfolio to 
+                        highlight my work and achievements. It is also a culmination of my web development skills obtained
+                        through a web development course in the Art department at Bucknell University. The website is designed to be 
+                        responsive and visually appealing, with a focus on user experience.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/RyanKoes/personal-website" target="_blank" aria-label="GitHub Repo">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h4>Coffee Analysis Repository</h4>
+                    <p class="project-tech">Python, NumPy, Pandas, scikit-learn, PyTorch, Matplotlib</p>
+                    <p>I use this repository to analyze electrochemical coffee measurements and related attributes, then build and compare predictive models for targets like HPLC caffeine (Caff), HPLC chlorogenic acids (CGA), and TDS. It’s my end-to-end research workspace for loading and cleaning datasets, generating features (including voltage/time-series “window” selections), training regression and neural network models (including architecture searches), evaluating performance with cross-validation-style splits, and producing plots and summary tables that I can use to interpret results and support my thesis/research writeups.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/RyanKoes/CoffeeAnalysis" target="_blank" aria-label="GitHub Repo">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4>Image Enhancement Tool</h4>
+                    <p class="project-tech">PyTorch, Hugging Face Diffusers & Transformers, Weights & Biases, NumPy, Pillow, SciKit-Learn</p>
+                    <p>This project is an image enhancement tool built around modern diffusion-model ideas: it experiments with using a pretrained latent diffusion model (Stable Diffusion via Hugging Face Diffusers) as a frozen backbone (VAE + UNet + scheduler) and then training a lightweight “ControlNet-style” conditioning module to guide denoising toward higher-quality outputs from a degraded/low-quality input image. The repo includes notebooks for loading and probing pretrained diffusion components and a PyTorch-based training/data pipeline (with on-the-fly degradations, paired LQ/HQ conventions, and optional Weights & Biases logging/sweeps), with the longer-term goal of producing a controllable latent diffusion enhancement pipeline that can be trained on datasets like DIV2K/Kaggle and used for inference to improve image quality.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/RyanKoes/Image-Enhancement-Tool" target="_blank" aria-label="GitHub Repo">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4>Unity VR Espresso Project</h4>
+                    <p class="project-tech">Unity, C#, VR Development</p>
+                    <p>This project is a virtual reality application designed to simulate the experience of making espresso in a coffee shop environment. It utilizes Unity's VR capabilities to create an immersive experience for users to learn and practice espresso-making techniques.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/RyanKoes/Unity-VR-Espresso-Project" target="_blank" aria-label="GitHub Repo">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4>Coffee Blends Creator</h4>
+                    <p class="project-tech">Next.js, React, TypeScript, Tailwind CSS, Vercel</p>
+                    <p>This is a Coffee Blend Builder web app using Next.js (App Router), React, TypeScript, and Tailwind CSS that lets users select a brew method, dial in target flavor intensities with interactive sliders, and add free-form preferences. It implements a serverless API route that integrates with Google Gemini to generate a practical blend recipe (origins/regions, processing, altitude ranges, roast guidance, and ratio breakdown) tailored to the user’s inputs, with input validation, clear error handling, and model fallbacks for reliability. Delivered a clean, accessible UI (ARIA-labeled controls) plus a “Learn” section that explains how roast, processing, altitude, and brew method influence flavor.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/RyanKoes/coffee-blends" target="_blank" aria-label="GitHub Repo">GitHub</a>
+                        <a href="https://coffee-blends.vercel.app/" target="_blank" aria-label="Live Demo">Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Add more project cards here as needed -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div
+            style="max-width: 1260px; margin: 0 auto; padding: 2rem 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; color: #39393A;">
+            <div style="flex: 1 1 40%; min-width: 220px;">
+                <h4
+                    style="margin-bottom: 0.5rem; color: #39393A; font-family: 'Unica One', sans-serif; font-size: 1.25rem;">
+                    Ryan Koes</h4>
+                <p style="margin: 0 0 0.5rem 0; font-size: 0.95rem;">Software Engineer</p>
+                <p style="margin: 0; font-size: 0.95rem;">&copy; 2025 Ryan Koes. All rights reserved.</p>
+            </div>
+            <div style="flex: 1 1 30%; min-width: 180px;">
+                <h5
+                    style="margin-bottom: 0.5rem; color: #39393A; font-family: 'Unica One', sans-serif; font-size: 1rem;">
+                    Contact</h5>
+                <p style="margin: 0 0 0.25rem 0; font-size: 0.95rem;"><a href="mailto:ryan_koes@comcast.net"
+                        style="color: #B96D40; text-decoration: none;">ryan_koes@comcast.net</a></p>
+                <p style="margin: 0; font-size: 0.95rem;"><a href="https://www.linkedin.com/in/ryan-koes"
+                        target="_blank" style="color: #B96D40; text-decoration: none;">LinkedIn</a></p>
+            </div>
+            <div style="flex: 1 1 20%; min-width: 120px; text-align: right;">
+                <h5
+                    style="margin-bottom: 0.5rem; color: #39393A; font-family: 'Unica One', sans-serif; font-size: 1rem;">
+                    Quick Links</h5>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li><a href="about.html"
+                            style="color: #B96D40; text-decoration: none; font-size: 0.95rem;">About</a></li>
+                    <li><a href="experience.html"
+                            style="color: #B96D40; text-decoration: none; font-size: 0.95rem;">Experience</a></li>
+                    <li><a href="education.html"
+                            style="color: #B96D40; text-decoration: none; font-size: 0.95rem;">Education</a></li>
+                    <li><a href="extracurricular.html"
+                            style="color: #B96D40; text-decoration: none; font-size: 0.95rem;">Extracurricular</a></li>
+                    <li><a href="projects.html"
+                            style="color: #B96D40; text-decoration: none; font-size: 0.95rem;">Projects</a></li>
+                    <li><a href="conferences.html">Conferences</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Logic
+        function setupMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (hamburger && navLinks) {
+                // Remove older event listeners to prevent duplicates
+                const newHamburger = hamburger.cloneNode(true);
+                hamburger.parentNode.replaceChild(newHamburger, hamburger);
+
+                newHamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    newHamburger.classList.toggle('toggle');
+                });
+            }
+        }
+
+        window.addEventListener('load', () => {
+            setupMobileMenu();
+            const fadeElements = document.querySelectorAll('.fade-in-element');
+            fadeElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top <= window.innerHeight * 0.85 && rect.bottom >= 0;
+                if (isVisible && !element.classList.contains('visible')) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
